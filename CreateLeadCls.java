@@ -17,32 +17,32 @@ public class CreateLeadCls {
 		objcrmdriver.manage().window().maximize();
 		WebElement usrnme =  objcrmdriver.findElement(By.id("username"));
 		usrnme.sendKeys("demoSalesManager");
-	    objcrmdriver.findElement(By.id("password")).sendKeys("crmsfa");
-	    objcrmdriver.findElement(By.className("decorativeSubmit")).click();
-	    objcrmdriver.findElement(By.linkText("CRM/SFA")).click();
-	    objcrmdriver.findElement(By.linkText("Leads")).click();
-	    objcrmdriver.findElement(By.linkText("Create Lead")).click();
-	    WebElement cmpnme = objcrmdriver.findElement(By.id("createLeadForm_companyName"));
-	    cmpnme.sendKeys("TestLeaf");
-	    WebElement fstnme = objcrmdriver.findElement(By.id("createLeadForm_firstName"));
-	    fstnme.sendKeys("Sheelaw");
-	    WebElement lstnme = objcrmdriver.findElement(By.id("createLeadForm_lastName"));
-	    lstnme.sendKeys("Eswaramoorthy");
-	    WebElement dptnme = objcrmdriver.findElement(By.id("createLeadForm_departmentName"));
-	    dptnme.sendKeys("IT");
-	   	WebElement dcrptn = objcrmdriver.findElement(By.id("createLeadForm_description"));
-	    dcrptn.sendKeys("Creating the test lead");
-	    WebElement email = objcrmdriver.findElement(By.id("createLeadForm_primaryEmail"));
-	    email.sendKeys("sheelaw@gmail.com");
-	    WebElement stnme = objcrmdriver.findElement(By.name("generalStateProvinceGeoId"));
-	    Select objchoosest = new Select(stnme);
-	    objchoosest.selectByVisibleText("New York");
-	    objcrmdriver.findElement(By.className("smallSubmit")).click();
-	    String crtleadtitle = objcrmdriver.getTitle();
-	    System.out.println(crtleadtitle);
-	    objcrmdriver.close();
+		objcrmdriver.findElement(By.id("password")).sendKeys("crmsfa");
+		objcrmdriver.findElement(By.className("decorativeSubmit")).click();
+		objcrmdriver.findElement(By.linkText("CRM/SFA")).click();
+		objcrmdriver.findElement(By.linkText("Leads")).click();
+		objcrmdriver.findElement(By.linkText("Create Lead")).click();
+		WebElement cmpnme = objcrmdriver.findElement(By.id("createLeadForm_companyName"));
+		cmpnme.sendKeys("TestLeaf");
+		WebElement fstnme = objcrmdriver.findElement(By.id("createLeadForm_firstName"));
+		fstnme.sendKeys("Sheelaw");
+		WebElement lstnme = objcrmdriver.findElement(By.id("createLeadForm_lastName"));
+		lstnme.sendKeys("Eswaramoorthy");
+		WebElement dptnme = objcrmdriver.findElement(By.id("createLeadForm_departmentName"));
+		dptnme.sendKeys("IT");
+		WebElement dcrptn = objcrmdriver.findElement(By.id("createLeadForm_description"));
+		dcrptn.sendKeys("Creating the test lead");
+		WebElement email = objcrmdriver.findElement(By.id("createLeadForm_primaryEmail"));
+		email.sendKeys("sheelaw@gmail.com");
+		WebElement stnme = objcrmdriver.findElement(By.name("generalStateProvinceGeoId"));
+		Select objchoosest = new Select(stnme);
+		objchoosest.selectByVisibleText("New York");
+		objcrmdriver.findElement(By.className("smallSubmit")).click();
+		String crtleadtitle = objcrmdriver.getTitle();
+		System.out.println(crtleadtitle);
+		objcrmdriver.close();
 	}
 
-	
+
 
 }
